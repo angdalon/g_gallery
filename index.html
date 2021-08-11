@@ -7,8 +7,30 @@
     <title>Gallery</title>
     <link rel="stylesheet" href="style.css"></link>
 </head>
-<body>
+<body id="fullPage">
+    <main>
 
+    <section class="flexcontainer">
+            <button class="navButton"> <img src=arrow.svg id="backwardButton"></button>
+            <img src='images/1_Ishgard.jpg' class="currentlyViewedImage">
+            <button class="navButton"> <img src=arrow.svg id="forwardButton"></button>
+    </section>
+
+    <div id="imageDescriptionBox">
+        <h1>Name of the picture</h1>
+        <p>Description</p>
+    </div>
+
+
+    <nav id="thumbnailBar">
+        <button class="thumbnailButton"> <img src='images/1_Ishgard.jpg' class ="thumbnailPic" alt=""> </button>
+        <button class="thumbnailButton"> A </button>
+        <button class="thumbnailButton"> A </button>
+        <button class="thumbnailButton"> A </button>
+        <button class="thumbnailButton"> A </button>
+    </nav>
+
+    </main>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="scripts.js"></script>     
 </body>

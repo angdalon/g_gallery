@@ -1,0 +1,111 @@
+#fullPage {
+    background-color: rgb(224, 224, 224);
+    position: relative;
+    margin: auto;
+}
+
+
+
+#galleryViewer {
+    position: relative;
+    margin: auto;
+    background-color: white;
+
+    /* 64% for the image, 2x 5.5% for buttons */
+
+    border: 5px solid black;
+}
+
+.centered {
+    margin: auto;
+    display: block;
+    width: 75%;
+  }
+
+
+#thumbnailBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+    height: 3vw;
+
+    top: 0.1vw;
+    justify-content: center;
+    padding: 0.1vw;
+    
+  }
+
+.thumbnailButton {
+
+    margin: 0.3vw;
+    border: 0.1vw solid lightgrey;
+    background-color: rgb(235, 225, 225);
+    padding: 0.15vw;
+    
+    transition-duration: 0.3s;
+    height: 3vw;
+    width: 5.333vw;
+    box-shadow: 0px 15px 10px -15px , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.thumbnailButton:hover {
+    cursor: pointer;
+    height: 3.6vw;
+    width: 6.4vw;
+    border: 0.05vw solid maroon;
+}
+
+
+.thumbnailPic {
+    height: 100%;
+    padding: 0px;
+}
+
+
+
+.navButton {
+    flex-grow: 1;
+    height: 100%;
+    border: 0px;
+    background-color:  rgb(235, 225, 225);
+    transition-duration: 0.2s;
+}
+
+.navButton:hover {
+    background-color: rgb(204, 203, 203);
+    cursor: pointer;
+
+}
+
+#forwardButton {
+    transform: rotate(180deg)
+}
+
+
+.currentlyViewedImage {
+    height: 100%;
+    flex-grow: 2;
+}
+
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 56vw;
+    height: 24.75vw;
+    margin: 5vw auto 2vw auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
+
+
+/*
+.thumbnailSize {
+    width: 5%;
+}
+*/
+
