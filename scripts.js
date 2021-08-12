@@ -49,12 +49,37 @@ let galleryDB = {
     uldah: {
         picture: 'images/4_Uldah.jpg',
         title: "Ul'dah",
-        description: "The bustling commercial hub of Ul'dah sits amid the desolate desert landscape of southern Aldenard. The city is organized strategically around the dome-shaped citadel at its center. "
+        description: "The bustling commercial hub of Ul'dah sits amid the desolate desert landscape of southern Aldenard. The city is organized strategically around the dome-shaped citadel at its center."
     },
     midgardsormr: {
         picture: 'images/5_Midgardsormr.jpg',
         title: 'Midgardsormr',
         description: 'The Father of Dragons, Midgardsormr is said to have come to Hydaelyn at the beginning of time. Yet, fundamental questions such as exactly when and whence remain unanswered, throwing the legends into doubt.'
+    },
+    ta: {
+        picture: 'images/16.jpg',
+        title: 'Title 16',
+        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+    },
+    te: {
+        picture: 'images/17.jpg',
+        title: 'Title 17',
+        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+    },
+    ti: {
+        picture: 'images/18.jpg',
+        title: 'Title 18',
+        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+    },
+    to: {
+        picture: 'images/19.jpg',
+        title: 'Title 19',
+        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+    },
+    tu: {
+        picture: 'images/20.jpg',
+        title: 'Title 20',
+        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
     },
 };
 
@@ -73,7 +98,7 @@ $('#currentDescription').text(imagesData[currentPicIndex].description);
 
 
 
-let imagesData = [galleryDB.ishgard, galleryDB.gridania, galleryDB.limsa, galleryDB.uldah, galleryDB.midgardsormr];
+let imagesData = [galleryDB.ishgard, galleryDB.gridania, galleryDB.limsa, galleryDB.uldah, galleryDB.midgardsormr, galleryDB.ta, galleryDB.te, galleryDB.ti, galleryDB.to, galleryDB.tu];
 let currentPicIndex= 0;
 
 
