@@ -77,11 +77,19 @@ let imagesData = [galleryDB.ishgard, galleryDB.gridania, galleryDB.limsa, galler
 let currentPicIndex= 0;
 
 
+let highlightThis = (numbr) => {    
+    $('#tbID_' + numbr).focus();    // highlight the thumbnail
+};
+
 let loadPhoto = (picNumber) => {
     $('#currentPicture').attr('src', imagesData[picNumber].picture);
     $('#currentTitle').text(imagesData[picNumber].title);
     $('#currentDescription').text(imagesData[picNumber].description);
+    highlightThis(currentPicIndex);
 };
+
+
+
 
 loadPhoto(currentPicIndex); // loads first image automatically
 
@@ -103,8 +111,8 @@ let gDB = Object.values(imagesData)
 let i = -1;
 gDB.forEach((obj) => {
     i = i+1
-    $('#thumbnailBar').append('<button class="thumbnailButton"> <img data-number=' + i + ' src=' + obj.picture + ' class="thumbnailPic" </button>')
-    // adds thumbnail buttons to the nav bar and give data-number to images inside
+    $('#thumbnailBar').append('<button class="thumbnailButton" id=tbID_' + i + '> <img data-number=' + i + ' src=' + obj.picture + ' class="thumbnailPic" </button>')
+    // adds thumbnail buttons with ID to the nav bar and give data-number to images inside
 });
 
 
@@ -114,14 +122,6 @@ $('.thumbnailPic').on('click', (event) => {
     currentPicIndex = numberIndex;
     loadPhoto(currentPicIndex);
 })
-
-
-
-
-$('input').keypress(function(e) {
-    if(e.which == 37) { // left key
-        $('#backwardButton').trigger('click');
-}});
 
 
 function checkKey(e) {         // navigation with left and right keys
@@ -136,3 +136,10 @@ function checkKey(e) {         // navigation with left and right keys
        // right arrow
     }
 }
+
+
+/*
+let highlightThis = (picNumber) => {
+    $('#thumbnailPic').append(img);
+};
+*/

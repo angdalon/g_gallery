@@ -51,12 +51,13 @@
     text-align: center;
 }
 
-.thumbnailButton:hover {
+.thumbnailButton:hover, .thumbnailButton:focus {
     cursor: pointer;
     height: 3.6vw;
     width: 6.4vw;
     border: 0.05vw solid maroon;
 }
+
 
 
 .thumbnailPic {
