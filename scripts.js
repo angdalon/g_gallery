@@ -32,54 +32,54 @@ let imgData = {
 
 let galleryDB = {
     ishgard: {
-        picture: 'images/1_Ishgard.jpg',
+        picture: 'images/1.jpg',
         title: 'Ishgard', 
         description: "In the central region of Abalathia's Spine, that great mountain range that spans Aldenard from east to west, can be found the forbidding highlands of Coerthas and the Holy See of Ishgard"
     },
     gridania: {
-        picture: 'images/2_Gridania.jpg',
+        picture: 'images/2.jpg',
         title: 'Gridania',
         description: 'In the eastern reaches of the Aldenard landmass, home to vast, dense woodlands and coursing rivers, lies the forest nation of Gridania.'
     },
     limsa: {
-        picture: 'images/3_Limsa.jpg',
+        picture: 'images/3.jpg',
         title: 'Limsa',
         description: 'On the southern coast of the island of Vylbrand, under the shadow of ancient cliffs worn by the relentless onslaught of the Rhotano Sea, lies the marine city-state of Limsa Lominsa.'
     },
     uldah: {
-        picture: 'images/4_Uldah.jpg',
+        picture: 'images/4.jpg',
         title: "Ul'dah",
         description: "The bustling commercial hub of Ul'dah sits amid the desolate desert landscape of southern Aldenard. The city is organized strategically around the dome-shaped citadel at its center."
     },
     midgardsormr: {
-        picture: 'images/5_Midgardsormr.jpg',
+        picture: 'images/5.jpg',
         title: 'Midgardsormr',
         description: 'The Father of Dragons, Midgardsormr is said to have come to Hydaelyn at the beginning of time. Yet, fundamental questions such as exactly when and whence remain unanswered, throwing the legends into doubt.'
     },
-    ta: {
+    il_mheg: {
         picture: 'images/16.jpg',
-        title: 'Title 16',
-        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+        title: 'Il Mheg',
+        description: 'Not so long ago, here in the shadow of the northern ranges, lay the great Kingdom of Voeburt. A nation with a proud history...that the sin eaters cut short.'
     },
-    te: {
+    raktika: {
         picture: 'images/17.jpg',
-        title: 'Title 17',
-        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+        title: "Rak'tika Greatwood",
+        description: "A forest home to the Night's Blessed – a faction of people who revere the dark, and the remnants of the ancient ruins of Ronka."
     },
-    ti: {
+    amaurot: {
         picture: 'images/18.jpg',
-        title: 'Title 18',
-        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+        title: 'Amaurot',
+        description: 'The greatest city in the original world of the Ancients, later destroyed due to a calamitous event involving wild creation magicks.'
     },
-    to: {
+    crystarium: {
         picture: 'images/19.jpg',
-        title: 'Title 19',
-        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+        title: 'Crystarium',
+        description: 'A bustling city that developed around the Crystal Tower in the years following its sudden appearance in Lakeland. It serves as a safe haven for people of all races and creeds.'
     },
-    tu: {
+    eulmore: {
         picture: 'images/20.jpg',
-        title: 'Title 20',
-        description: 'Random text for testing purposes. Random text for testing purposes. Random text for testing purposes. Random text for testing purposes.'
+        title: 'Eulmore',
+        description: 'With its influence extending across the majority of the isle of Kholusia, this powerful military nation once stood firm against the onslaught of the sin eaters. '
     },
 };
 
@@ -98,7 +98,7 @@ $('#currentDescription').text(imagesData[currentPicIndex].description);
 
 
 
-let imagesData = [galleryDB.ishgard, galleryDB.gridania, galleryDB.limsa, galleryDB.uldah, galleryDB.midgardsormr, galleryDB.ta, galleryDB.te, galleryDB.ti, galleryDB.to, galleryDB.tu];
+let imagesData = [galleryDB.ishgard, galleryDB.gridania, galleryDB.limsa, galleryDB.uldah, galleryDB.midgardsormr, galleryDB.il_mheg, galleryDB.raktika, galleryDB.amaurot, galleryDB.crystarium, galleryDB.eulmore];
 let currentPicIndex= 0;
 
 
