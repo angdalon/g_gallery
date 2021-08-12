@@ -1,3 +1,5 @@
+document.onkeydown = checkKey;
+
 /*
 let injectThisPic = (imageName) => {
     let img = new Image();
@@ -77,6 +79,8 @@ let currentPicIndex= 0;
 
 let loadPhoto = (picNumber) => {
     $('#currentPicture').attr('src', imagesData[picNumber].picture);
+    $('#currentTitle').text(imagesData[picNumber].title);
+    $('#currentDescription').text(imagesData[picNumber].description);
 };
 
 loadPhoto(currentPicIndex); // loads first image automatically
@@ -107,7 +111,28 @@ gDB.forEach((obj) => {
 $('.thumbnailPic').on('click', (event) => {
     let thumbnailClicked = $(event.target).attr('data-number');
     let numberIndex = parseInt(thumbnailClicked);
-    console.log(numberIndex);
+    currentPicIndex = numberIndex;
+    loadPhoto(currentPicIndex);
 })
 
 
+
+
+$('input').keypress(function(e) {
+    if(e.which == 37) { // left key
+        $('#backwardButton').trigger('click');
+}});
+
+
+function checkKey(e) {         // navigation with left and right keys
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        $('#backwardButton').trigger('click');
+       // left arrow
+    }
+    else if (e.keyCode == '39') {
+        $('#forwardButton').trigger('click');
+       // right arrow
+    }
+}
