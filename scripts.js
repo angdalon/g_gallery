@@ -43,7 +43,7 @@ let galleryDB = {
     },
     limsa: {
         picture: 'images/3_Limsa.jpg',
-        title: 'Limsa Lominsa',
+        title: 'Limsa',
         description: 'On the southern coast of the island of Vylbrand, under the shadow of ancient cliffs worn by the relentless onslaught of the Rhotano Sea, lies the marine city-state of Limsa Lominsa.'
     },
     uldah: {
@@ -111,7 +111,8 @@ let gDB = Object.values(imagesData)
 let i = -1;
 gDB.forEach((obj) => {
     i = i+1
-    $('#thumbnailBar').append('<button class="thumbnailButton" id=tbID_' + i + '> <img data-number=' + i + ' src=' + obj.picture + ' class="thumbnailPic" </button>')
+    $('#thumbnailBar').append('<div id="thumbnailsHere"><button class="thumbnailButton" id=tbID_' + i + '> <img data-number=' + i + ' src=' + obj.picture + ' class="thumbnailPic" </button> <span class="bubble">' + obj.title + '</span> </div>');
+
     // adds thumbnail buttons with ID to the nav bar and give data-number to images inside
 });
 

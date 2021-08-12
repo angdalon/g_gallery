@@ -39,7 +39,7 @@
 
 .thumbnailButton {
 
-    margin: 0.3vw;
+    margin: 0.5vw;
     border: 0.1vw solid lightgrey;
     background-color: rgb(235, 225, 225);
     padding: 0.15vw;
@@ -55,14 +55,14 @@
     cursor: pointer;
     height: 3.6vw;
     width: 6.4vw;
-    border: 0.05vw solid maroon;
+    border: 0.15vw solid rgb(71, 2, 2);
 }
 
 
 
 .thumbnailPic {
     height: 100%;
-    padding: 0px;
+    padding: 0vw;
 }
 
 
@@ -160,3 +160,20 @@
     border-radius: 1vw;
   }
 
+
+
+.bubble {
+    position: relative;
+    background: rgb(151, 142, 142);
+    color: white;
+    border-radius: 1vw;
+    padding: 0.2vw;
+    top: 1.5vw;
+    font-size: 0.9vw;
+    text-align: center;
+    margin: 0px;
+    display: none;
+}
+#thumbnailsHere:hover .bubble{
+    display: block;
+}
