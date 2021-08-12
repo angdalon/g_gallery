@@ -121,14 +121,22 @@ loadPhoto(currentPicIndex); // loads first image automatically
 $('#forwardButton').on('click', () => {
     if (currentPicIndex < imagesData.length - 1) {  // works without tweaking even if more objects are added to galleryDB
         currentPicIndex = currentPicIndex + 1; // or simply currentPicIndex++;
+        loadPhoto(currentPicIndex)
+    } else if (currentPicIndex = imagesData.length) {       // from last goes to first image instead of being stuck
+        currentPicIndex = 0;
         loadPhoto(currentPicIndex)};
 });
 
+
 $('#backwardButton').on('click', () => {
-    if (currentPicIndex > 0) {
+    if (currentPicIndex > 0) {  
         currentPicIndex = currentPicIndex - 1;
-        loadPhoto(currentPicIndex);}
+        loadPhoto(currentPicIndex)
+    } else if (currentPicIndex = 1) {
+        currentPicIndex = imagesData.length -1;     //from first goes to last image instead of being stuck
+        loadPhoto(currentPicIndex)};
 });
+
 
 
 let gDB = Object.values(imagesData)
