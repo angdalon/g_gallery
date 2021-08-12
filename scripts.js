@@ -8,11 +8,11 @@ let injectThisPic = (imageName) => {
 injectThisPic('/images/1 - Ishgard.jpg')
 
 */
-
+/*
 let addPic = (imageLocation) => {
     $('#fortest').append('<img src=' + imageLocation + ' class="thumbnailSize" >')
 }
-
+*/
 //addPic('/images/1_Ishgard.jpg')
 
 
@@ -79,10 +79,10 @@ let loadPhoto = (picNumber) => {
     $('#currentPicture').attr('src', imagesData[picNumber].picture);
 };
 
-loadPhoto(currentPicIndex);
+loadPhoto(currentPicIndex); // loads first image automatically
 
 $('#forwardButton').on('click', () => {
-    if (currentPicIndex < imagesData.length - 1) {
+    if (currentPicIndex < imagesData.length - 1) {  // works without tweaking even if more objects are added to galleryDB
         currentPicIndex = currentPicIndex + 1; // or simply currentPicIndex++;
         loadPhoto(currentPicIndex)};
 });
@@ -92,3 +92,22 @@ $('#backwardButton').on('click', () => {
         currentPicIndex = currentPicIndex - 1;
         loadPhoto(currentPicIndex);}
 });
+
+
+let gDB = Object.values(imagesData)
+
+let i = -1;
+gDB.forEach((obj) => {
+    i = i+1
+    $('#thumbnailBar').append('<button class="thumbnailButton"> <img data-number=' + i + ' src=' + obj.picture + ' class="thumbnailPic" </button>')
+    // adds thumbnail buttons to the nav bar and give data-number to images inside
+});
+
+
+$('.thumbnailPic').on('click', (event) => {
+    let thumbnailClicked = $(event.target).attr('data-number');
+    let numberIndex = parseInt(thumbnailClicked);
+    console.log(numberIndex);
+})
+
+
