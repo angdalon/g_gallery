@@ -1,26 +1,8 @@
 #fullPage {
     background-color: rgb(224, 224, 224);
     position: relative;
-    margin: auto;
+
 }
-
-
-
-#galleryViewer {
-    position: relative;
-    margin: auto;
-    background-color: white;
-
-    /* 64% for the image, 2x 5.5% for buttons */
-
-    border: 5px solid black;
-}
-
-.centered {
-    margin: auto;
-    display: block;
-    width: 75%;
-  }
 
 
 #thumbnailBar {
@@ -88,14 +70,14 @@
     left: 3.42vw;
     top: 0vw;
     width: 46.66vw; 56 a 100% */ 
-    width: 47.46vw;
+    /*width: 47.46vw;
     top: 23vw;
+    left: 26.3vw; */
+    position: absolute;
+    width: 100%;
+    bottom: 0vw;        /* this way even with more text it scales upwards, not out of frame */
+    left: 0vw;
 
-    position: fixed;
-    left: 26.3vw;
-
-
-    padding: 1vw 1vw 0vw 1vw;
     margin: auto;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.52);
@@ -143,6 +125,7 @@
 #middlePart {
     display: flex;
     flex-grow: 1;
+    position: relative;
 }
 
 .currentlyViewedImage {
