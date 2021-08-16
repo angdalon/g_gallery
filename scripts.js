@@ -34,7 +34,7 @@ let galleryDB = {
     ishgard: {
         picture: 'images/1.jpg',
         title: 'Ishgard', 
-        description: "In the central region of Abalathia's Spine, that great mountain range that spans Aldenard from east to west, can be found the forbidding highlands of Coerthas and the Holy See of Ishgard"
+        description: "In the central region of Abalathia's Spine, that great mountain range that spans Aldenard from east to west, can be found the forbidding highlands of Coerthas and the Holy See of Ishgard."
     },
     gridania: {
         picture: 'images/2.jpg',
@@ -110,6 +110,8 @@ let loadPhoto = (picNumber) => {
     $('#currentPicture').attr('src', imagesData[picNumber].picture);
     $('#currentTitle').text(imagesData[picNumber].title);
     $('#currentDescription').text(imagesData[picNumber].description);
+    $('#placeholderImg').attr('src', imagesData[picNumber].picture);
+    $('#modalCaption').text(imagesData[picNumber].title);
     highlightThis(currentPicIndex);
 };
 
@@ -169,11 +171,23 @@ function checkKey(e) {         // navigation with left and right keys
         $('#forwardButton').trigger('click');
        // right arrow
     }
+    else if (e.keyCode == '38') {
+        $('#currentPicture').trigger('click');
+       // up arrow
+    }
+    else if (e.keyCode == '40') {
+        $('#closeModal').trigger('click');
+       // down arrow
+    }
 }
 
 
-/*
-let highlightThis = (picNumber) => {
-    $('#thumbnailPic').append(img);
-};
-*/
+//  for modal images
+
+$('#currentPicture').on('click', () => {
+    $('.modal').css('display', 'block');
+});
+
+$('#closeModal').on('click', () => {
+    $('.modal').css('display', 'none');
+});
